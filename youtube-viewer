@@ -1146,7 +1146,8 @@ sub play_or_download {
             print "** MPlayer Line: @mplayer_line\n\n";
         }
         else {
-            system @mplayer_line, $streaming;
+            #system @mplayer_line, $streaming;
+            system 'omxplayer', $streaming;
         }
 
         # Change directory back to the main working directory
